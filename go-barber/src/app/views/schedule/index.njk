@@ -1,0 +1,24 @@
+{% extends "_layouts/default.njk" %} {% block body %}
+<div class="content">
+  <strong>{{ user.name }}, seus horáios agendados para hoje:</strong>
+
+  {% if schedule.length === 0 %}
+    <p>Nenhum agendamento encontrado</p>
+  {% endif %}
+
+  {% for appointment in schedule %}
+    <div class="provider {% if appointment.active === false %}disabled{% endif %}">
+      <div>
+        <img src="/files/{{ appointment.user.avatar }}" />
+        <strong>{{ appointment.user.name }}</strong>
+      </div>
+      <strong>{{ appointment.hour }}</strong>
+    </div>
+  {% endfor %}
+
+  <a href="/app/dashboard" class="schedule">Voltar</a>
+
+  <a href="/app/logout" class="logout">Sair</a>
+</div>
+
+{% endblock %}

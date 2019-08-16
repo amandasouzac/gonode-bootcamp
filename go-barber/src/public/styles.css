@@ -290,3 +290,19 @@ ul.providers {
 .main-wrapper .content form button:hover {
   background: #634dac;
 }
+
+.main-wrapper .content a.schedule {
+  margin: 15px 0;
+  display: block;
+  text-align: center;
+  color: #999;
+  text-decoration: none;
+}
+
+.main-wrapper .content a.schedule:hover {
+  color: #666;
+}
+
+.main-wrapper .disabled {
+  opacity: 0.5;
+}

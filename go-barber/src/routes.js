@@ -12,6 +12,7 @@ const AppointmentController = require('./app/controllers/AppointmentController')
 const AvailableController = require('./app/controllers/AvailableController')
 const DashboardController = require('./app/controllers/DashboardController')
 const FileController = require('./app/controllers/FileController')
+const ScheduleController = require('./app/controllers/ScheduleController')
 const SessionController = require('./app/controllers/SessionController')
 const UserController = require('./app/controllers/UserController')
 
@@ -41,5 +42,7 @@ routes.get('/app/dashboard', DashboardController.index)
 routes.get('/app/appointments/new/:provider', AppointmentController.create)
 routes.post('/app/appointments/new/:provider', AppointmentController.store)
 routes.get('/app/available/:provider', AvailableController.index)
+
+routes.get('/app/schedule', ScheduleController.index)
 
 module.exports = routes
